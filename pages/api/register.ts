@@ -20,16 +20,15 @@ export default async function handler(
     });
 
     if (existingUser) {
-      return res.status(422).json({ error: "Email Token" });
+      return res.status(422).json({ error: "Email Taken" });
     }
-
-    const hashedpassword = await bcrypt.hash(password, 12);
+    const hashedPassword = await bcrypt.hash(password, 12);
 
     const user = await prismadb.user.create({
       data: {
         email,
         name,
-        hashedpassword,
+        hashedPassword,
         image: "",
         emailVerified: new Date(),
       },

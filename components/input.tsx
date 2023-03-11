@@ -15,6 +15,7 @@ const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }) => {
         onChange={onChange}
         value={value}
         id={id}
+        type={type}
         className="
             block
             rounded-md

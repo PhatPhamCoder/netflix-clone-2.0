@@ -4,7 +4,6 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 
 const Billboard = () => {
   const { data } = useBillBorad();
-  console.log({ data });
   return (
     <div className="relative h-[56.25vw]">
       <video
